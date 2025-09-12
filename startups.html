@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StartupSetGo — Founders</title>
+<meta name="description" content="StartupSetGo — Founders profiles demo.">
+<style>
+  :root{
+    --bg:#071028; --card:#0b1220; --muted:#9aa6b2; --accent:#6ee7b7; --accent-2:#60a5fa;
+    --glass: rgba(255,255,255,0.04); --radius:14px; --maxw:1100px; font-family: Inter, system-ui, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:linear-gradient(180deg,#071028,#041022);color:#e6eef6;padding:30px 18px;display:flex;justify-content:center;font-size:16px;line-height:1.45;}
+  .wrap{width:100%;max-width:var(--maxw)}
+  /* Top nav (same as index) */
+  .site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#05233c;font-weight:800}
+  .title{font-weight:800;font-size:18px}
+  .subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+  .header-actions{display:flex;gap:8px;align-items:center}
+  .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05233c;padding:8px 12px;border-radius:10px;font-weight:700;border:none;cursor:pointer;text-decoration:none;display:inline-block}
+  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 10px;border-radius:10px;text-decoration:none;font-size:14px}
+  /* Page */
+  .main-header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .logo-lg{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#05233c;font-weight:900}
+  .page-title{font-size:20px;font-weight:800}
+  .page-sub{color:var(--muted);font-size:13px;margin-top:4px}
+  .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;margin-bottom:18px}
+  .startup-name{font-size:22px;font-weight:900}
+  .startup-one{color:var(--muted);margin-top:6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px}
+  .card-top{display:flex;gap:12px;align-items:center}
+  .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:900;color:#05233c}
+  .name{font-weight:800}
+  .role{color:var(--muted);font-size:13px}
+  .bio{color:var(--muted);font-size:14px}
+  .contact{display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+  .cta-row{display:flex;gap:8px;margin-top:auto}
+  .small{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:10px;color:var(--muted);text-decoration:none}
+  footer{color:var(--muted);font-size:13px;margin-top:18px;text-align:center}
+  @media (max-width:920px){
+    .site-header{flex-direction:column;align-items:flex-start}
+    .header-actions{align-self:stretch;justify-content:space-between;width:100%}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Top nav (identical to index) -->
+    <header class="site-header" role="banner">
+      <div class="brand">
+        <div class="logo">SSG</div>
+        <div>
+          <div class="title">StartupSetGo</div>
+          <div class="subtitle">From idea → funding → execution</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="main navigation">
+        <a class="ghost" href="Untitled-1.html">Home</a>
+        <a class="ghost" href="vendors.html">Vendors</a>
+        <a class="ghost" href="experts.html">Experts</a>
+        <a class="ghost" href="funding.html">Funding</a>
+        <a class="ghost" href="startups.html">Startups</a>
+        <a class="ghost" href="schools.html">Schools</a>
+        <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank" rel="noopener">Join / Submit Idea</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <header class="main-header">
+      <div class="logo-lg">SSG</div>
+      <div>
+        <div class="page-title">Founders • StartupSetGo</div>
+        <div class="page-sub">Student innovators onboarded via StartupSetGo</div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="startup-name">StartupSetGo — Founders Showcase</div>
+      <div class="startup-one">These are student founders who submitted their startup ideas through our campaigns. Click any profile to request an intro.</div>
+    </section>
+
+    <!-- Founder cards grid -->
+    <div class="grid">
+      <!-- Founder 1 -->
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar">MS</div>
+          <div>
+            <div class="name">Mrityunjay Singh</div>
+            <div class="role">Student (Class 11, Age 16) • Samneghat</div>
+          </div>
+        </div>
+        <div class="bio">Idea: Hee hee (Stage: Just an idea)</div>
+        <div class="contact">
+          <div>Email: mrityunjaysingh2009m@gmail.com</div>
+          <div>Phone: 9234560407</div>
+        </div>
+        <div class="cta-row">
+          <a class="small" href="mailto:mrityunjaysingh2009m@gmail.com">Email</a>
+          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+        </div>
+      </div>
+
+      <!-- Founder 2 -->
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar">TC</div>
+          <div>
+            <div class="name">Tanya Chaturvedi</div>
+            <div class="role">Student (Class 11, Age 15) • Krishna Nagar colony varanasi</div>
+          </div>
+        </div>
+        <div class="bio">Idea: IT sector service provider (Stage: Just an idea)</div>
+        <div class="contact">
+          <div>Email: tanyachaturvedi217@gmail.com</div>
+          <div>Phone: 7863737282</div>
+        </div>
+        <div class="cta-row">
+          <a class="small" href="mailto:tanyachaturvedi217@gmail.com">Email</a>
+          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+        </div>
+      </div>
+
+      <!-- Founder 3 -->
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar">PS</div>
+          <div>
+            <div class="name">Pranjali Singh</div>
+            <div class="role">Student (Class 11th, Age 16) • Chhitupur Lanka varanasi</div>
+          </div>
+        </div>
+        <div class="bio">Idea: Yes (Stage: Just an idea)</div>
+        <div class="contact">
+          <div>Email: pranjalisingh010@gmail.com</div>
+          <div>Phone: 9250720810</div>
+        </div>
+        <div class="cta-row">
+          <a class="small" href="mailto:pranjalisingh010@gmail.com">Email</a>
+          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+        </div>
+      </div>
+
+      <!-- Founder 4 -->
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar">Y</div>
+          <div>
+            <div class="name">Yogeshwar</div>
+            <div class="role">Student (Class 11, Age 18) • Chittupur, taranagar colony</div>
+          </div>
+        </div>
+        <div class="bio">Idea: Yea (Stage: Just an idea)</div>
+        <div class="contact">
+          <div>Email: sarweshwarmishra629@gmail.com</div>
+          <div>Phone: 9507219129</div>
+        </div>
+        <div class="cta-row">
+          <a class="small" href="mailto:sarweshwarmishra629@gmail.com">Email</a>
+          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+        </div>
+      </div>
+
+      <!-- Founder 5 -->
+      <div class="card">
+        <div class="card-top">
+          <div class="avatar">SU</div>
+          <div>
+            <div class="name">Shaurya Upadhyay</div>
+            <div class="role">Student (Class 11, Age 17) • Godowlia, Varanasi</div>
+          </div>
+        </div>
+        <div class="bio">Idea: Produce man power in local areas according to the persons need (Stage: Just an idea)</div>
+        <div class="contact">
+          <div>Email: shouryau45@gmail.com</div>
+          <div>Phone: 7307951722</div>
+        </div>
+        <div class="cta-row">
+          <a class="small" href="mailto:shouryau45@gmail.com">Email</a>
+          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      StartupSetGo • Founders showcase • © 2025<br>
+      <a href="index.html" style="color:var(--accent);text-decoration:none;font-weight:700">← Back to Home</a>
+    </footer>
+  </div>
+</body>
+</html>

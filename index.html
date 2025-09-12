@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StartupSetGo — Home</title>
+  <meta name="description" content="StartupSetGo — From idea to impact. Find vendors, experts, funding and school programs for student startups.">
+  <style>
+    /* ========== styles (self-contained) ========== */
+    :root{
+      --bg:#071028;
+      --card:#0b1220;
+      --muted:#9aa6b2;
+      --accent:#6ee7b7;
+      --accent-2:#60a5fa;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:14px;
+      --maxw:1100px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background: linear-gradient(180deg,#071028 0%, #081426 60%);
+      color: #e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:30px 18px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.45;
+    }
+    .container{width:100%;max-width:var(--maxw);}
+
+    /* Header */
+    .site-header{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;margin-bottom:26px;
+    }
+    .brand{
+      display:flex;gap:12px;align-items:center;
+    }
+    .logo{
+      width:52px;height:52px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#05233c;
+      box-shadow: 0 6px 18px rgba(46,64,85,0.5);
+      font-size:18px;
+    }
+    .title{font-weight:800;font-size:18px}
+    .subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+
+    /* CTA */
+    .header-actions{display:flex;gap:8px;align-items:center}
+    .btn{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#05233c;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;
+      box-shadow:0 6px 18px rgba(96,165,250,0.08);
+      text-decoration:none;
+      display:inline-block;
+    }
+    .ghost{
+      background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:10px;
+      text-decoration:none;font-size:14px;
+    }
+
+    /* Hero */
+    .hero{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:28px; margin-bottom:22px; box-shadow:0 8px 30px rgba(2,6,23,0.6);
+      display:flex;gap:20px;align-items:center;justify-content:space-between;
+    }
+    .hero-left{max-width:60%}
+    .h1{font-size:28px;font-weight:900;line-height:1.03}
+    .h2{color:var(--muted);margin-top:8px}
+    .searchbar{margin-top:16px;display:flex;gap:10px;align-items:center}
+    .input{
+      background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:10px 12px;border-radius:10px;color:inherit;min-width:220px;
+    }
+    .select{background:var(--glass);border-radius:10px;padding:10px;border:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+    .hero-right{min-width:240px;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+
+    /* Sectors grid */
+    .sector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:22px}
+    .sector-card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));padding:14px;border-radius:12px;display:flex;gap:12px;align-items:center;border:1px solid rgba(255,255,255,0.02);cursor:pointer;transition:transform .18s;text-decoration:none;color:inherit}
+    .sector-card:hover{transform:translateY(-6px)}
+    .sector-emoji{font-size:22px}
+    .sector-title{font-weight:800}
+    .sector-sub{color:var(--muted);font-size:12px}
+
+    /* Vendor grid */
+    .vendor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .vendor-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px}
+    .vendor-top{display:flex;gap:12px;align-items:center}
+    .vendor-avatar{width:54px;height:54px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#05233c}
+    .vendor-name{font-weight:800}
+    .vendor-role{color:var(--muted);font-size:13px}
+    .vendor-meta{display:flex;gap:8px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+    .vendor-cta{display:flex;gap:8px;align-items:center;margin-top:auto}
+    .small-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:10px;color:var(--muted);cursor:pointer;text-decoration:none}
+
+    /* feature tiles */
+    .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:12px}
+    .tile{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    .footer{margin-top:30px;color:var(--muted);font-size:13px;padding:20px 0;text-align:center}
+
+    /* responsive */
+    @media (max-width:920px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero-left{max-width:100%}
+      .hero-right{align-self:stretch;align-items:stretch}
+    }
+
+    /* small helpers */
+    a { color: inherit; }
+    .tag { background: rgba(110,231,183,0.09); color: var(--accent); padding:6px 8px; border-radius:8px; font-weight:700; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- NAV -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">SSG</div>
+        <div>
+          <div class="title">StartupSetGo</div>
+          <div class="subtitle">From idea → funding → execution</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="main navigation">
+        <!-- replace links with actual pages later -->
+        <a class="ghost" href="vendors.html">Vendors</a>
+        <a class="ghost" href="experts.html">Experts</a>
+        <a class="ghost" href="funding.html">Funding</a>
+        <a class="ghost" href="startups.html">Startups</a>
+        <a class="ghost" href="schools.html">Schools</a>
+        <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank" rel="noopener">Join / Submit Idea</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="h1">From Idea to Impact — join India’s student-led startup ecosystem</div>
+        <div class="h2">Find vetted vendors, expert mentors, funding schemes and school programs — all in one place.</div>
+
+        <div class="searchbar">
+          <input class="input" id="searchInput" placeholder="Search skills, vendors, services or schools (eg. legal, marketing)">
+          <select class="select" id="citySelect">
+            <option value="">All cities</option>
+            <option>Delhi</option><option>Mumbai</option><option>Kolkata</option><option>Varanasi</option>
+          </select>
+          <button class="btn" onclick="scrollToSection('sections')">Explore</button>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;">
+          <a class="ghost" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Submit Idea (Founders)</a>
+          <a class="ghost" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Become a Vendor/Expert</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div style="background:var(--glass);padding:14px;border-radius:12px;text-align:center">
+          <div style="font-weight:800">Quick sign-up</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px">Enter email to get updates & event invites</div>
+          <form id="quickSign" style="margin-top:10px" onsubmit="handleQuickSign(event)">
+            <input class="input" id="quickEmail" type="email" placeholder="your email (example@mail.com)" required style="width:100%;margin-bottom:8px">
+            <button class="btn" type="submit" style="width:100%">Get updates</button>
+          </form>
+        </div>
+
+        <div style="background:var(--glass);padding:12px;border-radius:12px;text-align:center;margin-top:10px">
+          <div style="font-weight:800">Request school pilot</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px">Bring StartupSetGo to your school — pilot available</div>
+          <a class="btn" style="display:inline-block;margin-top:10px" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Pilot</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK NAV CARDS -->
+    <section id="sections" style="margin-top:18px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-weight:800">Explore</div>
+        <div style="color:var(--muted);font-size:13px">Click a card to open details (or create pages later)</div>
+      </div>
+
+      <div class="sector-grid" style="margin-bottom:18px">
+        <a class="sector-card" href="#vendors"><div class="sector-emoji">🤝</div><div><div class="sector-title">Vendors</div><div class="sector-sub">Design, Marketing, Legal</div></div></a>
+        <a class="sector-card" href="#experts"><div class="sector-emoji">🧠</div><div><div class="sector-title">Experts & Mentors</div><div class="sector-sub">Investors, Advisors</div></div></a>
+        <a class="sector-card" href="#funding"><div class="sector-emoji">💰</div><div><div class="sector-title">Funding</div><div class="sector-sub">Grants, Incubators</div></div></a>
+        <a class="sector-card" href="#startups"><div class="sector-emoji">🚀</div><div><div class="sector-title">Startups</div><div class="sector-sub">Founder profiles</div></div></a>
+        <a class="sector-card" href="#schools"><div class="sector-emoji">🏫</div><div><div class="sector-title">School Programs</div><div class="sector-sub">Clubs & Workshops</div></div></a>
+        <a class="sector-card" href="#resources"><div class="sector-emoji">📚</div><div><div class="sector-title">Resources</div><div class="sector-sub">Templates & Guides</div></div></a>
+      </div>
+
+      <!-- FEATURED PREVIEW (small cards) -->
+      <div style="font-weight:800;margin-bottom:10px">Featured</div>
+      <div class="vendor-grid" style="margin-bottom:18px">
+        <!-- vendor example -->
+        <div class="vendor-card">
+          <div class="vendor-top">
+            <div class="vendor-avatar">AK</div>
+            <div>
+              <div class="vendor-name">Aarti Kapoor</div>
+              <div class="vendor-role">Growth & Social — Delhi</div>
+              <div class="vendor-meta">5 yrs • ₹1,000/hr</div>
+            </div>
+          </div>
+          <div style="color:var(--muted);font-size:14px">Performance marketing & campus campaigns for early-stage student startups.</div>
+          <div class="vendor-cta">
+            <a class="small-btn" href="vendor-aarti.html">View</a>
+            <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+          </div>
+        </div>
+
+        <!-- expert example -->
+        <div class="vendor-card">
+          <div class="vendor-top">
+            <div class="vendor-avatar">SM</div>
+            <div>
+              <div class="vendor-name">Sourav Mehra</div>
+              <div class="vendor-role">Legal Advisor — Kolkata</div>
+              <div class="vendor-meta">7 yrs • Consultation ₹1,500</div>
+            </div>
+          </div>
+          <div style="color:var(--muted);font-size:14px">Company registration, IP & compliance for student startups.</div>
+          <div class="vendor-cta">
+            <a class="small-btn" href="vendor-sourav.html">View</a>
+            <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Request Intro</a>
+          </div>
+        </div>
+
+        <!-- funding example -->
+        <div class="vendor-card">
+          <div class="vendor-top">
+            <div class="vendor-avatar">GF</div>
+            <div>
+              <div class="vendor-name">Govt Grants</div>
+              <div class="vendor-role">Startup Schemes</div>
+              <div class="vendor-meta">Seed & prototype support</div>
+            </div>
+          </div>
+          <div style="color:var(--muted);font-size:14px">Curated list of government grants & incubator programs for student founders.</div>
+          <div class="vendor-cta">
+            <a class="small-btn" href="#funding">Details</a>
+            <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Apply</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TILES: Vendors / Experts / Funding / Schools -->
+      <div class="tiles">
+        <div class="tile">
+          <div style="font-weight:800;margin-bottom:8px">Vendors</div>
+          <div style="color:var(--muted);font-size:14px">Find vetted service providers for design, dev, marketing and more. Create a profile or request an intro.</div>
+          <div style="margin-top:10px"><a class="btn" href="#vendors">Explore Vendors</a></div>
+        </div>
+
+        <div class="tile">
+          <div style="font-weight:800;margin-bottom:8px">Experts & Mentors</div>
+          <div style="color:var(--muted);font-size:14px">Connect with mentors, legal advisors and investors who actively support student startups.</div>
+          <div style="margin-top:10px"><a class="btn" href="#experts">Find Mentors</a></div>
+        </div>
+
+        <div class="tile">
+          <div style="font-weight:800;margin-bottom:8px">Funding</div>
+          <div style="color:var(--muted);font-size:14px">Curated government grants and incubator programs — apply via our form and we'll guide you.</div>
+          <div style="margin-top:10px"><a class="btn" href="#funding">See Schemes</a></div>
+        </div>
+
+        <div class="tile">
+          <div style="font-weight:800;margin-bottom:8px">Schools</div>
+          <div style="color:var(--muted);font-size:14px">Pilot programs, startup clubs and quarterly idea challenges — request a school pilot.</div>
+          <div style="margin-top:10px"><a class="btn" href="#schools">School Programs</a></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      StartupSetGo • Build, Launch, Scale — © 2025 • <a href="mailto:hello@startupsetgo.com" style="color:var(--muted);text-decoration:none">Contact</a>
+    </footer>
+  </div>
+
+  <script>
+    // small helper: scroll to section
+    function scrollToSection(id){
+      const el = document.getElementById(id) || document.querySelector('#sections');
+      el.scrollIntoView({behavior:'smooth'});
+    }
+
+    // quick sign: simple mailto fallback
+    function handleQuickSign(e){
+      e.preventDefault();
+      const email = document.getElementById('quickEmail').value.trim();
+      if(!email) return alert('Please enter your email');
+      // replace mailto with integration to your Google Form if you prefer
+      window.location.href = 'mailto:hello@startupsetgo.com?subject=QuickSign%20Lead&body=Email:%20' + encodeURIComponent(email);
+    }
+
+    // small UX: listen for enter on search to scroll
+    document.getElementById('searchInput').addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ scrollToSection('sections'); }
+    });
+  </script>
+</body>
+</html>
