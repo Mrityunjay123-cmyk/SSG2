@@ -33,7 +33,7 @@
     .subtitle{font-size:12px;color:var(--muted)}
     .header-actions{display:flex;gap:8px;align-items:center}
     .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:10px;text-decoration:none;font-size:14px}
-    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05233c;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;text-decoration:none}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05233c;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;text-decoration:none;display:inline-block}
 
     /* Hero */
     .hero{display:flex;gap:24px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;margin-bottom:20px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
@@ -49,23 +49,26 @@
     .section{margin-bottom:20px}
     .grid{display:grid;gap:14px}
     .features{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));}
-    .feature-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);text-align:center}
-    .feature-emoji{font-size:26px;margin-bottom:8px}
+    .feature-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+    .feature-emoji{font-size:26px;margin-bottom:4px}
     .how{display:flex;gap:12px;align-items:stretch}
-    .step{flex:1;background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);text-align:center}
+    .step{flex:1;background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);text-align:center;display:flex;flex-direction:column;gap:10px;justify-content:flex-start}
     .numbers{display:flex;gap:12px}
-    .num-card{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+    .num-card{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;text-align:center;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px;align-items:center}
 
     /* Testimonials */
-    .testi{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .testi{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:8px}
 
     /* Footer */
     .footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center;padding-top:12px;border-top:1px solid rgba(255,255,255,0.02)}
+
+    .small-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:13px;display:inline-block}
 
     @media (max-width:920px){
       .hero{flex-direction:column;align-items:flex-start}
       .hero-right{width:100%}
       .how{flex-direction:column}
+      .numbers{flex-direction:column}
     }
   </style>
 </head>
@@ -101,7 +104,7 @@
         <div class="hero-p">StartupSetGo supports students (Class 6–12 & college) to validate ideas, find mentors, access funding schemes and launch pilots in schools & communities.</div>
 
         <div class="hero-ctas">
-          <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Get Started — Submit Idea</a>
+          <a class="btn" href="founder.html">Get Started — Submit Idea</a>
           <a class="ghost" href="schemes.html">See Funding Schemes</a>
         </div>
 
@@ -110,10 +113,12 @@
           <div style="flex:1;min-width:220px;background:var(--glass);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
             <div style="font-weight:800">Problem</div>
             <div style="color:var(--muted);margin-top:8px">Students have ideas but face missing mentorship, no clear path to funding and no trusted vendors for execution.</div>
+            <a class="small-ghost" href="founder.html" style="margin-top:10px;display:inline-block">Submit Idea</a>
           </div>
           <div style="flex:1;min-width:220px;background:var(--glass);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
             <div style="font-weight:800">Our Solution</div>
             <div style="color:var(--muted);margin-top:8px">We connect students to vetted experts, vendors, incubators and government schemes — with school pilots & community validation.</div>
+            <a class="small-ghost" href="schemes.html" style="margin-top:10px;display:inline-block">View Schemes</a>
           </div>
         </div>
 
@@ -127,7 +132,7 @@
           <button class="btn" style="width:100%;margin-top:10px">Get updates</button>
         </form>
         <div style="margin-top:14px;color:var(--muted);font-size:13px">Or request a school pilot</div>
-        <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" style="display:block;text-align:center;margin-top:10px">Request Pilot</a>
+        <a class="btn" href="schools.html" style="display:block;text-align:center;margin-top:10px">Request Pilot</a>
       </aside>
     </section>
 
@@ -138,13 +143,48 @@
         <div style="color:var(--muted);font-size:13px">Vetted vendors, mentors and school pilots</div>
       </div>
 
-      <div class="grid features" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));">
-        <div class="feature-card"><div class="feature-emoji">🚀</div><div style="font-weight:800">Startup Onboarding</div><div class="muted" style="margin-top:6px">Guided idea validation & admission.</div></div>
-        <div class="feature-card"><div class="feature-emoji">💰</div><div style="font-weight:800">Funding Guidance</div><div class="muted" style="margin-top:6px">Match with grants & incubators.</div></div>
-        <div class="feature-card"><div class="feature-emoji">🧑‍🏫</div><div style="font-weight:800">Mentors</div><div class="muted" style="margin-top:6px">Legal, growth & product mentors.</div></div>
-        <div class="feature-card"><div class="feature-emoji">🏫</div><div style="font-weight:800">School Pilots</div><div class="muted" style="margin-top:6px">Quarterly idea challenges & demo days.</div></div>
-        <div class="feature-card"><div class="feature-emoji">🛒</div><div style="font-weight:800">Vendor Connect</div><div class="muted" style="margin-top:6px">Design, dev & marketing vendors.</div></div>
-        <div class="feature-card"><div class="feature-emoji">🌐</div><div style="font-weight:800">Community</div><div class="muted" style="margin-top:6px">Network of students & founders.</div></div>
+      <div class="grid features">
+        <div class="feature-card">
+          <div class="feature-emoji">🚀</div>
+          <div style="font-weight:800">Startup Onboarding</div>
+          <div class="muted" style="margin-top:6px">Guided idea validation & admission.</div>
+          <a class="btn" href="founder.html" style="margin-top:8px">Explore</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">💰</div>
+          <div style="font-weight:800">Funding Guidance</div>
+          <div class="muted" style="margin-top:6px">Match with grants & incubators.</div>
+          <a class="btn" href="schemes.html" style="margin-top:8px">Explore</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🧑‍🏫</div>
+          <div style="font-weight:800">Mentors</div>
+          <div class="muted" style="margin-top:6px">Legal, growth & product mentors.</div>
+          <a class="btn" href="experts.html" style="margin-top:8px">Explore</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🏫</div>
+          <div style="font-weight:800">School Pilots</div>
+          <div class="muted" style="margin-top:6px">Quarterly idea challenges & demo days.</div>
+          <a class="btn" href="schools.html" style="margin-top:8px">Explore</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🛒</div>
+          <div style="font-weight:800">Vendor Connect</div>
+          <div class="muted" style="margin-top:6px">Design, dev & marketing vendors.</div>
+          <a class="btn" href="vendors.html" style="margin-top:8px">Explore</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🌐</div>
+          <div style="font-weight:800">Community</div>
+          <div class="muted" style="margin-top:6px">Network of students & founders.</div>
+          <a class="btn" href="funding.html" style="margin-top:8px">Explore</a>
+        </div>
       </div>
     </section>
 
@@ -160,16 +200,19 @@
           <div style="font-size:20px;font-weight:900">1</div>
           <div style="font-weight:800;margin-top:8px">Submit idea</div>
           <div class="muted" style="margin-top:8px">Fill a simple form — 3 minutes.</div>
+          <a class="btn" href="founder.html" style="margin-top:8px">Go</a>
         </div>
         <div class="step">
           <div style="font-size:20px;font-weight:900">2</div>
           <div style="font-weight:800;margin-top:8px">Get matched</div>
           <div class="muted" style="margin-top:8px">Vendors & mentors review & mentor you.</div>
+          <a class="btn" href="experts.html" style="margin-top:8px">Go</a>
         </div>
         <div class="step">
           <div style="font-size:20px;font-weight:900">3</div>
           <div style="font-weight:800;margin-top:8px">Pilot & apply</div>
           <div class="muted" style="margin-top:8px">School pilot, prototype & apply for seed grants.</div>
+          <a class="btn" href="schemes.html" style="margin-top:8px">Go</a>
         </div>
       </div>
     </section>
@@ -182,9 +225,21 @@
       </div>
 
       <div class="numbers">
-        <div class="num-card"><div style="font-weight:900;font-size:22px">25+</div><div class="muted" style="margin-top:6px">Students onboarded</div></div>
-        <div class="num-card"><div style="font-weight:900;font-size:22px">8</div><div class="muted" style="margin-top:6px">School pilots</div></div>
-        <div class="num-card"><div style="font-weight:900;font-size:22px">6</div><div class="muted" style="margin-top:6px">Validated ideas</div></div>
+        <div class="num-card">
+          <div style="font-weight:900;font-size:22px">25+</div>
+          <div class="muted" style="margin-top:6px">Students onboarded</div>
+          <a class="ghost" href="founder.html" style="margin-top:8px">See Founders</a>
+        </div>
+        <div class="num-card">
+          <div style="font-weight:900;font-size:22px">8</div>
+          <div class="muted" style="margin-top:6px">School pilots</div>
+          <a class="ghost" href="schools.html" style="margin-top:8px">See Schools</a>
+        </div>
+        <div class="num-card">
+          <div style="font-weight:900;font-size:22px">6</div>
+          <div class="muted" style="margin-top:6px">Validated ideas</div>
+          <a class="ghost" href="schemes.html" style="margin-top:8px">See Schemes</a>
+        </div>
       </div>
     </section>
 
@@ -198,11 +253,13 @@
       <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="testi">
           <div style="font-weight:800">Mrityunjay Singh</div>
-          <div class="muted" style="margin-top:6px">Class 11 — Idea validated in school pilot. Email: mrityunjaysingh2009m@gmail.com</div>
+          <div class="muted" style="margin-top:6px">Class 11 — Idea validated in school pilot.</div>
+          <a class="ghost" href="founder.html" style="margin-top:8px">View Profile</a>
         </div>
         <div class="testi">
           <div style="font-weight:800">Tanya Chaturvedi</div>
-          <div class="muted" style="margin-top:6px">Class 11 — Working on marketing pilot. Email: tanyachaturvedi217@gmail.com</div>
+          <div class="muted" style="margin-top:6px">Class 11 — Working on marketing pilot.</div>
+          <a class="ghost" href="founder.html" style="margin-top:8px">View Profile</a>
         </div>
       </div>
     </section>
@@ -212,7 +269,7 @@
       <div style="font-weight:900;font-size:18px">Ready to start your journey?</div>
       <div class="muted" style="margin-top:8px">Submit a 2-minute idea form and we will contact you.</div>
       <div style="margin-top:12px">
-        <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank">Submit Idea</a>
+        <a class="btn" href="founder.html">Submit Idea</a>
         <a class="ghost" href="schemes.html" style="margin-left:8px">View Schemes</a>
       </div>
     </section>
@@ -229,7 +286,6 @@
       e.preventDefault();
       const email = document.getElementById('quickEmail').value.trim();
       if(!email) return alert('Please enter your email');
-      // simple mailto fallback — you can connect to Google Form instead
       window.location.href = 'mailto:hello@startupsetgo.com?subject=Quick%20Signup&body=Email:%20' + encodeURIComponent(email);
     }
   </script>
