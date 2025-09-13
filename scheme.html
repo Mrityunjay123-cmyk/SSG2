@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>StartupSetGo — Government Schemes</title>
+<meta name="description" content="Curated government schemes for student founders — eligibility, criteria, documents, how to apply and quick actions.">
+<style>
+  :root{
+    --bg:#071028; --muted:#9aa6b2; --accent:#6ee7b7; --accent-2:#60a5fa;
+    --card:#0b1220; --glass: rgba(255,255,255,0.03); --radius:12px; --maxw:1100px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:linear-gradient(180deg,#071028,#041022);color:#e6eef6;padding:20px;display:flex;justify-content:center}
+  .wrap{width:100%;max-width:var(--maxw)}
+  .site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#05233c}
+  .title{font-weight:800;font-size:18px}
+  .subtitle{font-size:12px;color:var(--muted)}
+  .header-actions{display:flex;gap:8px;align-items:center}
+  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:10px;text-decoration:none;font-size:14px}
+  .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05233c;padding:8px 12px;border-radius:10px;font-weight:700;text-decoration:none}
+
+  .page-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .p-title{font-size:20px;font-weight:900}
+  .p-sub{color:var(--muted);font-size:13px}
+
+  .controls{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+  .input, .select{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:10px;color:inherit}
+  .select{min-width:160px}
+
+  .content{display:grid;grid-template-columns:1fr 340px;gap:16px}
+  @media (max-width:980px){ .content{grid-template-columns:1fr} }
+
+  .list{display:flex;flex-direction:column;gap:12px}
+  .scheme-card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:10px}
+  .scheme-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .scheme-title{font-weight:800;font-size:16px}
+  .badge{background:rgba(110,231,183,0.08);color:var(--accent);padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
+  .muted{color:var(--muted);font-size:13px}
+
+  .meta{display:flex;gap:8px;flex-wrap:wrap}
+  .section{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+  .checklist{list-style:none;padding-left:0;margin:6px 0}
+  .checklist li{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.02);font-size:14px}
+  .docs{font-size:13px;color:var(--muted)}
+  .apply-row{display:flex;gap:8px;align-items:center;margin-top:8px}
+  .apply-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#05233c;padding:8px 12px;border-radius:8px;font-weight:800;text-decoration:none}
+  .apply-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;color:var(--muted);text-decoration:none}
+
+  .sidebar{position:relative}
+  .info-box{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);margin-bottom:12px}
+  .filter-group{display:flex;flex-direction:column;gap:8px}
+
+  .empty{padding:30px;border-radius:12px;background:linear-gradient(180deg,var(--card),rgba(255,255,255,0.01));text-align:center;color:var(--muted)}
+
+  /* print-friendly tweaks */
+  @media print{
+    body{background:white;color:#000;padding:10px}
+    .site-header, .controls, .sidebar, .apply-row { display: none !important; }
+    .wrap{max-width:100%}
+    .scheme-card{border:1px solid #ddd;background:#fff;color:#000}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- NAV (same style as your index) -->
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">SSG</div>
+        <div>
+          <div class="title">StartupSetGo</div>
+          <div class="subtitle">From idea → funding → execution</div>
+        </div>
+      </div>
+
+      <nav class="header-actions" aria-label="main nav">
+        <a class="ghost" href="index.html">Home</a>
+        <a class="ghost" href="vendors.html">Vendors</a>
+        <a class="ghost" href="experts.html">Experts</a>
+        <a class="ghost" href="funding.html">Funding</a>
+        <a class="ghost" href="founder.html">Founders</a>
+        <a class="ghost" href="schools.html">Schools</a>
+        <a class="btn" href="https://docs.google.com/forms/d/REPLACE_FORM_URL/viewform" target="_blank" rel="noopener">Join / Submit Idea</a>
+      </nav>
+    </header>
+
+    <div class="page-head">
+      <div>
+        <div class="p-title">Government Schemes — Which one fits your startup?</div>
+        <div class="p-sub">Search & filter across schemes. Open official portals or print a clean PDF for judges/incubators.</div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+        <a class="ghost" href="#tips" style="padding:8px 12px;border-radius:10px">Help</a>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" class="input" placeholder="Search (eg: seed, incubator, guarantee, Mudra, NIDHI)">
+      <select id="filterSector" class="select">
+        <option value="">All sectors</option>
+        <option value="tech">Tech/SaaS</option><option value="education">Education</option><option value="agri">Agri</option><option value="manufacturing">Manufacturing</option>
+      </select>
+      <select id="filterStage" class="select">
+        <option value="">All stages</option>
+        <option value="idea">Idea</option><option value="prototype">Prototype</option><option value="revenue">Revenue</option>
+      </select>
+      <button class="btn" onclick="applyFilters()">Apply</button>
+    </div>
+
+    <div class="content">
+      <!-- left -->
+      <div>
+        <div id="schemesList" class="list">
+
+          <!-- 1) Startup India — SISFS -->
+          <div class="scheme-card" data-sector="tech" data-stage="prototype" data-keywords="startupindia,sisfs,seed,prototype,grant">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">Startup India — Seed Fund Scheme (SISFS)</div>
+                <div class="muted">Early-stage financial support for proof-of-concept, prototype development and market trials.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Grant / Seed</div>
+                <div class="muted" style="margin-top:6px">Implementing: DPIIT / Startup India</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">SISFS provides seed support through empanelled incubators/seed funds to startups to help them reach prototype & market stage. Eligibility follows Startup India / DPIIT norms (early-stage, innovative startups).</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist</strong></div>
+                <ul class="checklist">
+                  <li>Recognised as a startup under Startup India (DPIIT) or meets Startup India definition.</li>
+                  <li>At idea/prototype stage needing funds for POC, prototype or trials.</li>
+                  <li>Team documents and project summary required.</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Common documents</strong>: 1-page project summary, founders' IDs, pitch deck, prototype evidence (if any).</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to apply</strong>
+                  <div class="muted" style="margin-top:8px">Apply via empanelled incubators/seed funds or visit the official SISFS portal.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://seedfund.startupindia.gov.in/" target="_blank" rel="noopener">Open SISFS Portal</a>
+                    <a class="apply-ghost" href="#" onclick="copyChecklist(this)">Checklist</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">Attach mentor/institution endorsement to increase chances; keep budget 3–6 months.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2) Atal Innovation Mission — AIC -->
+          <div class="scheme-card" data-sector="education" data-stage="idea" data-keywords="atal,aic,incubator,aim,niti">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">Atal Innovation Mission — Atal Incubation Centres (AIC)</div>
+                <div class="muted">AICs provide incubation, mentoring, infrastructure and networking support to startups.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Incubation • Mentorship</div>
+                <div class="muted" style="margin-top:6px">Managed by AIM (NITI Aayog)</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">AIM supports AICs (set up by institutions/organisations) and startups can apply to AICs for incubation, mentoring and lab access.</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist (for startups)</strong></div>
+                <ul class="checklist">
+                  <li>Student/early-stage teams with an idea or prototype.</li>
+                  <li>Submission of idea summary and team details to local AIC.</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Docs</strong>: Idea summary, team profile, mentor/supporting institution details (if any).</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to apply / find AIC</strong>
+                  <div class="muted" style="margin-top:8px">Search for nearest AIC and contact the centre for application details; organisations can apply to AIM to set up AIC per AIM guidelines.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://aim.gov.in/pdf/GUIDELINES_FOR_SETTING_UP_OF_ATAL_INCUBATION_CENTRES_%28AICs%29.pdf" target="_blank" rel="noopener">AIC Guidelines (PDF)</a>
+                    <a class="apply-ghost" href="#" onclick="alert('Contact local AIC or email hello@startupsetgo.com')">Request Help</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">If in school, ask principal to connect with local AIC or AIM programmes.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3) NIDHI — Seed Support Program -->
+          <div class="scheme-card" data-sector="tech" data-stage="prototype" data-keywords="nidhi,ss,pseed,seed support,DST">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">NIDHI — NIDHI Seed Support Program (NIDHI-SSP)</div>
+                <div class="muted">DST program providing seed support through selected incubators to early startups.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Seed Grant</div>
+                <div class="muted" style="margin-top:6px">Managed by: Department of Science & Technology (DST)</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">NIDHI-SSP funds startups via incubators—incubators identify deserving startups and provide seed funds and hand-holding.</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist</strong></div>
+                <ul class="checklist">
+                  <li>Startup selected by a NIDHI supported incubator.</li>
+                  <li>Must fulfil incubator-specific criteria (incubator will guide documentation).</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Docs</strong>: Incubator application, project summary, team profiles, incubator recommendations.</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to apply</strong>
+                  <div class="muted" style="margin-top:8px">Approach a NIDHI-supported incubator (list available on NIDHI portal) and apply for seed support through them.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://nidhi.dst.gov.in/nidhissp/" target="_blank" rel="noopener">NIDHI-SSP (official)</a>
+                    <a class="apply-ghost" href="#" onclick="alert('Check incubator list on NIDHI portal')">Incubators list</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">Join a recognised incubator — they handle most of the application process.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4) CGTMSE — Credit Guarantee -->
+          <div class="scheme-card" data-sector="manufacturing" data-stage="revenue" data-keywords="cgtmse,credit,guarantee,loan">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">CGTMSE — Credit Guarantee for MSMEs</div>
+                <div class="muted">Guarantee cover for collateral-free loans to micro & small enterprises — helps get bank loans without security.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Credit Guarantee</div>
+                <div class="muted" style="margin-top:6px">Operated by CGTMSE (MSME & SIDBI)</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">CGTMSE provides guarantee to lending institutions for loans to Micro & Small Enterprises (helps startups/SMEs access finance without collateral).</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist</strong></div>
+                <ul class="checklist">
+                  <li>Borrowers to obtain PAN / Udyam registration as required by lender.</li>
+                  <li>Loan must be from an eligible lending institution registered with CGTMSE.</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Docs</strong>: Loan application, PAN, project/term loan docs as required by bank.</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to apply</strong>
+                  <div class="muted" style="margin-top:8px">Approach a bank/DFI — if bank is registered with CGTMSE they will process guarantee as part of loan sanction.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://www.cgtmse.in/" target="_blank" rel="noopener">CGTMSE Official</a>
+                    <a class="apply-ghost" href="#" onclick="alert('Contact your bank; ask for CGTMSE cover')">Bank contact tip</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">Get Udyam / GST set up before applying for bank loans — speeds up process.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5) PMMY — Mudra -->
+          <div class="scheme-card" data-sector="services" data-stage="revenue" data-keywords="mudra,pmmy,loan,microloan">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">Pradhan Mantri Mudra Yojana (PMMY)</div>
+                <div class="muted">Microloans (Shishu/Kishore/Tarun) for non-corporate small businesses, through banks/nbfc/cooperative.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Microloan</div>
+                <div class="muted" style="margin-top:6px">Support: Mudra / Banks</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">PMMY gives collateral-free loans up to specified limits under Shishu/Kishore/Tarun categories to micro / small entrepreneurs.</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist</strong></div>
+                <ul class="checklist">
+                  <li>Small business or micro-enterprise (non-corporate) requiring capital for operations/working capital.</li>
+                  <li>No prior credit history not mandatory — bank will assess viability.</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Docs</strong>: Business plan/summary, ID, address proof, Udyam/GST (if available).</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to apply</strong>
+                  <div class="muted" style="margin-top:8px">Approach a bank or log in to MyScheme / Udyam portals; many banks accept online apps for Mudra loans.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://www.mudra.org.in/Home/PMMYBankersKit" target="_blank" rel="noopener">PMMY Info (Mudra)</a>
+                    <a class="apply-ghost" href="#" onclick="alert('Talk to a bank branch about Mudra loan')">Bank tip</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">Start small (Shishu) if new — build track record, then scale to larger loans.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6) SIDBI — Fund of Funds (FFS) overview -->
+          <div class="scheme-card" data-sector="finance" data-stage="revenue" data-keywords="sidbi,fof,fundoffunds,vc,investment">
+            <div class="scheme-head">
+              <div>
+                <div class="scheme-title">SIDBI — Fund of Funds (Support to VC funds for startups)</div>
+                <div class="muted">Government-authorised Fund-of-Funds (managed via SIDBI) that invests in daughter VC funds which then back startups.</div>
+              </div>
+              <div style="text-align:right">
+                <div class="badge">Indirect Funding</div>
+                <div class="muted" style="margin-top:6px">Managed by: SIDBI / GoI</div>
+              </div>
+            </div>
+
+            <div class="meta">
+              <div class="section" style="flex:1">
+                <strong>What & Who</strong>
+                <div class="muted" style="margin-top:6px">FFS provides capital to VC funds (daughter funds). Startups can get funded if they are selected by these daughter funds; this is an indirect route to VC capital backed by government corpus.</div>
+
+                <div style="margin-top:10px"><strong>Eligibility checklist (for startups)</strong></div>
+                <ul class="checklist">
+                  <li>Startup must meet the startup definition and be investment-ready.</li>
+                  <li>Apply / pitch to VC funds (daughter funds) supported under the FFS program.</li>
+                </ul>
+
+                <div style="margin-top:8px" class="docs"><strong>Docs</strong>: Pitch deck, financials, traction metrics as required by VC.</div>
+              </div>
+
+              <div style="width:260px">
+                <div class="section">
+                  <strong>How to access</strong>
+                  <div class="muted" style="margin-top:8px">Track daughter funds listed by SIDBI and approach them; startup applications handled by VC funds.</div>
+                  <div class="apply-row">
+                    <a class="apply-primary" href="https://www.sidbivcf.in/en/funds/ffs" target="_blank" rel="noopener">SIDBI — FFS Info</a>
+                    <a class="apply-ghost" href="#" onclick="alert('Find daughter funds and apply to them directly')">Find funds</a>
+                  </div>
+                </div>
+                <div class="section" style="margin-top:10px">
+                  <strong>Tip</strong>
+                  <div class="muted" style="margin-top:8px">Get investor-ready: traction, metrics and clear unit economics help getting VC attention.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="emptyState" class="empty" style="display:none">No schemes found for these filters. Clear filters or try other keywords.</div>
+        </div>
+      </div>
+
+      <!-- right: sidebar -->
+      <aside class="sidebar">
+        <div class="info-box" id="tips">
+          <strong>How to use this page</strong>
+          <div class="muted" style="margin-top:8px">
+            1) Use search & filters. 2) Open official portal for final forms & deadlines. 3) Print via "Print/Save as PDF" for judges/incubators.
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>Quick filters</strong>
+          <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn" onclick="filterQuick('all')">All</button>
+            <button class="ghost" onclick="filterQuick('idea')">Idea</button>
+            <button class="ghost" onclick="filterQuick('prototype')">Prototype</button>
+            <button class="ghost" onclick="filterQuick('grant')">Grants</button>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>Need help applying?</strong>
+          <div class="muted" style="margin-top:8px">We can help prepare short proposals and collect documents. Email <a href="mailto:hello@startupsetgo.com">hello@startupsetgo.com</a>.</div>
+        </div>
+
+        <div class="info-box">
+          <strong>Note</strong>
+          <div class="muted" style="margin-top:8px">Always verify deadlines and portal pages on the official websites before applying. Government guidelines are updated periodically.</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer style="margin-top:18px;color:var(--muted);text-align:center">StartupSetGo • Government Schemes • © 2025</footer>
+  </div>
+
+<script>
+  // search & filter
+  const list = Array.from(document.querySelectorAll('.scheme-card'));
+  function applyFilters(){
+    const q = (document.getElementById('search').value||'').trim().toLowerCase();
+    const sector = document.getElementById('filterSector').value;
+    const stage = document.getElementById('filterStage').value;
+    let visible = 0;
+    list.forEach(card=>{
+      const keywords = ((card.dataset.keywords||'') + ' ' + (card.dataset.sector||'') + ' ' + (card.dataset.stage||'')).toLowerCase();
+      const matchesQuery = !q || keywords.includes(q);
+      const matchesSector = !sector || (card.dataset.sector === sector);
+      const matchesStage = !stage || (card.dataset.stage === stage);
+      if(matchesQuery && matchesSector && matchesStage){ card.style.display = 'flex'; visible++; } else card.style.display = 'none';
+    });
+    document.getElementById('emptyState').style.display = visible ? 'none' : 'block';
+  }
+  function filterQuick(v){
+    if(v === 'all'){ document.getElementById('search').value=''; document.getElementById('filterSector').value=''; document.getElementById('filterStage').value=''; applyFilters(); return; }
+    if(v === 'idea' || v === 'prototype' || v === 'grant'){ document.getElementById('search').value = v; applyFilters(); }
+  }
+  document.addEventListener('DOMContentLoaded', ()=> applyFilters());
+
+  // helper: copy checklist -> simple copy of card text
+  function copyChecklist(el){
+    try{
+      const card = el.closest('.scheme-card');
+      const text = Array.from(card.querySelectorAll('.checklist li')).map(li=>li.innerText).join('\\n');
+      navigator.clipboard.writeText(text);
+      alert('Checklist copied to clipboard');
+    }catch(e){ alert('Unable to copy'); }
+  }
+</script>
+</body>
+</html>
